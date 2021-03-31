@@ -9,7 +9,7 @@ const Admin = () => {
     return (
         <Container>
             <Row>
-                <Col xs={4} md={3}>
+                <Col xs={4} md={3} style={{backgroundColor:'#19103F'}}>
                     <ul style={{ listStyleType: 'none', cursor: 'pointer' }}>
                         {
                             !add  && <div>
@@ -17,7 +17,7 @@ const Admin = () => {
                                     <li onClick={() => setAdd(true)}>⚙️ Manage Foods</li>
                                 </h4>
                                 <hr />
-                                <h4 style={{ color: 'skyblue' }}>
+                                <h4 style={{ color: 'skyblue', backgroundColor:'#2F216A' }}>
                                     <li onClick={() => setAdd(false)}>➕ Add Food</li>
                                 </h4>
                                 <hr />
@@ -25,7 +25,7 @@ const Admin = () => {
                         }
                         {
                             add  && <div>
-                                <h4 style={{ color: 'skyblue' }}>
+                                <h4 style={{ color: 'skyblue', backgroundColor:'#2F216A' }}>
                                     <li onClick={() => setAdd(true)}>⚙️ Manage Foods</li>
                                 </h4>
                                 <hr />

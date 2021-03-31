@@ -14,7 +14,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="home">
+        <div className="home" style={{backgroundColor:'#19103F'}}>
             <NavigationBar></NavigationBar>
             <Form inline className="d-flex justify-content-center mt-4">
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
