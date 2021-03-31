@@ -5,6 +5,7 @@ import ManageFoods from './ManageFoods/ManageFoods';
 
 const Admin = () => {
     const [add, setAdd] = useState(false);
+    
     return (
         <Container>
             <Row>
