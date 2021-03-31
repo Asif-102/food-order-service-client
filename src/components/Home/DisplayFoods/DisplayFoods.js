@@ -1,8 +1,15 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 
 const DisplayFoods = ({ food }) => {
-    const {name, price , restaurant, imageURL} = food;
+    const {name, price , restaurant, imageURL, _id} = food;
+
+    const history = useHistory();
+    const handleClick = id =>{
+        history.push(`/checkout/${id}`)
+    }
+
     return (
         <Col xs={12} md={4} className="d-flex justify-content-center mt-4">
             <Card style={{ width: '18rem' }}>
@@ -15,7 +22,7 @@ const DisplayFoods = ({ food }) => {
                     <Card.Text>
                         Price : <span style={{color:'blue'}}>৳{price}</span>
                     </Card.Text>
-                    <Button variant="primary">Buy Now</Button>
+                    <Button variant="primary" onClick={()=>handleClick(_id)}>Buy Now</Button>
                 </Card.Body>
             </Card>
         </Col>

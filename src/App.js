@@ -4,6 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import Admin from "./components/Admin/Admin";
+import CheckOut from "./components/CheckOut/CheckOut";
 import Home from './components/Home/Home';
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login/>
+          </Route>
+          <Route path="/checkout/:id">
+            <CheckOut/>
           </Route>
           <Route path="*">
             <NotFound/>
