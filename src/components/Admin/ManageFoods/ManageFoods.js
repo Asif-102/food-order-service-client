@@ -12,7 +12,7 @@ const ManageFoods = () => {
         .then(data => setFoods(data))
     },[])
     return (
-        <Row>
+        <div className="row">
             <Col xs={8} md={8}>
                 <h2>Edit or Delete Foods</h2>
                 <table>
@@ -27,7 +27,7 @@ const ManageFoods = () => {
                 }
                 </table>
             </Col>
-        </Row>
+        </div>
     );
 };
 

@@ -10,8 +10,10 @@ const DisplayFoods = ({ food }) => {
                 <Card.Body>
                     <Card.Title>Food Name: {name}</Card.Title>
                     <Card.Text>
-                        <h6>Restaurant Name: {restaurant}</h6>
-                        <p>Price : <span style={{color:'blue'}}>৳{price}</span></p>
+                        Restaurant Name: {restaurant}
+                    </Card.Text>
+                    <Card.Text>
+                        Price : <span style={{color:'blue'}}>৳{price}</span>
                     </Card.Text>
                     <Button variant="primary">Buy Now</Button>
                 </Card.Body>
