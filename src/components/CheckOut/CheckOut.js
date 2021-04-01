@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { UserContext } from '../../App';
 import NavigationBar from '../Home/NavigationBar/NavigationBar';
 
 const CheckOut = () => {
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    const {email} = loggedInUser;
+
     let { id } = useParams();
-
     const [checkOut, setCheckOut] = useState({});
-
     const { name, price } = checkOut;
 
     useEffect(() => {
@@ -15,6 +19,26 @@ const CheckOut = () => {
             .then(res => res.json())
             .then(data => setCheckOut(data[0]))
     }, [id])
+
+    const submitOrder = ()=>{
+        const foodData = {
+            email:email,
+            foodName:name,
+            price:price,
+            quantity:'1',
+            date: new Date()
+        }
+        const url = `http://localhost:5000/checkOut`;
+
+        fetch(url, {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(foodData)
+        })
+        .then(res => console.log('server side response ', res))
+    }
 
     return (
         <div>
@@ -56,7 +80,7 @@ const CheckOut = () => {
                         <p>৳{price}</p>
                     </Col>
                 </Row>
-                <Button>Checkout</Button>
+                <Button onClick={()=>submitOrder()}>Checkout</Button>
             </Container>
         </div>
     );
