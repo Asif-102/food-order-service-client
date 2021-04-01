@@ -10,7 +10,7 @@ const EditDelete = ({food}) => {
     const [display, setDisplay] = useState('');
 
     const deleteFood = id=>{
-        const url = `http://localhost:5000/deleteFood/${id}`;
+        const url = `https://foodeli-store.herokuapp.com/deleteFood/${id}`;
         fetch(url,{
             method:'DELETE',
             headers:{

@@ -27,7 +27,7 @@ const AddFood = () => {
             setUpload('Uploaded successfull');
             setColor('green');
         }
-        const url = `http://localhost:5000/addFood`;
+        const url = `https://foodeli-store.herokuapp.com/addFood`;
         // console.log(foodData);
 
         fetch(url, {

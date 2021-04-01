@@ -1,13 +1,13 @@
 import './ManageFoods.css';
 import React, { useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import EditDelete from './EditDelete/EditDelete';
 
 const ManageFoods = () => {
     const [foods , setFoods] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/foods')
+        fetch('https://foodeli-store.herokuapp.com/foods')
         .then(res => res.json())
         .then(data => setFoods(data))
     },[])

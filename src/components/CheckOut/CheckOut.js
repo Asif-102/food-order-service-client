@@ -15,7 +15,7 @@ const CheckOut = () => {
     const { name, price } = checkOut;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/buy?_id=${id}`)
+        fetch(`https://foodeli-store.herokuapp.com/buy?_id=${id}`)
             .then(res => res.json())
             .then(data => setCheckOut(data[0]))
     }, [id])
@@ -28,7 +28,7 @@ const CheckOut = () => {
             quantity:'1',
             date: new Date()
         }
-        const url = `http://localhost:5000/checkOut`;
+        const url = `https://foodeli-store.herokuapp.com/checkOut`;
 
         fetch(url, {
             method:'POST',

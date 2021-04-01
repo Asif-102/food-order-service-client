@@ -11,7 +11,7 @@ const Orders = () => {
 
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders?email=${email}`)
+        fetch(`https://foodeli-store.herokuapp.com/orders?email=${email}`)
         .then(res => res.json())
         .then(data => {
             setTotalOrder(data)
