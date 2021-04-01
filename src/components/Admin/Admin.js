@@ -14,7 +14,7 @@ const Admin = () => {
                 <Col xs={4} md={3} style={{backgroundColor:'#19103F'}}>
                     <ul style={{ listStyleType: 'none', cursor: 'pointer' }}>
                         <h4 style={{color:'white'}}>Foodeli</h4>
-                        <h4 style={{color:'white'}}>Manage Products</h4>
+                        <h4 style={{color:'white'}}>Manage Foods</h4>
                         <hr/>
                         {
                             !add  && <div>
